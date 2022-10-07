@@ -1,0 +1,130 @@
+Breakpoint 1 at 0x555555555432
+[*] Failed to find objfile or not a valid file format: [Errno 2] No such file or directory: 'system-supplied DSO at 0x7ffff7fc9000'
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, 0x0000555555555432 in ?? ()
+[ Legend: Modified register | Code | Heap | Stack | String ]
+───────────────────────────────────────────────────────────────── registers ────
+$rax   : 0x24              
+$rbx   : 0x0               
+$rcx   : 0x0               
+$rdx   : 0xc0fe81f000000000
+$rsp   : 0x007fffffffd820  →  0x007ffff7ffd020  →  0x007ffff7ffe240  →  0x00555555554000  →   jg 0x555555554047
+$rbp   : 0x007fffffffd900  →  0x007fffffffd950  →  0x0000000000000001
+$rsi   : 0x00555555556008  →   add BYTE PTR [rbp+0x6e], al
+$rdi   : 0x007fffffffd920  →  "picoCTF{br1ng_y0ur_0wn_k3y_}AAAAAAAA"
+$rip   : 0x00555555555432  →   mov eax, DWORD PTR [rbp-0xb8]
+$r8    : 0x81f0            
+$r9    : 0x007fffffffd5b6  →  0x5b36281883006663 ("cf"?)
+$r10   : 0xcf              
+$r11   : 0x0               
+$r12   : 0x007fffffffda68  →  0x007fffffffde3f  →  "/mnt/sda7/cybersecurity/ctf/pico/2022/reverse_engi[...]"
+$r13   : 0x0055555555548b  →   endbr64 
+$r14   : 0x0               
+$r15   : 0x007ffff7ffd020  →  0x007ffff7ffe240  →  0x00555555554000  →   jg 0x555555554047
+$eflags: [zero CARRY PARITY ADJUST SIGN trap INTERRUPT direction overflow resume virtualx86 identification]
+$cs: 0x33 $ss: 0x2b $ds: 0x00 $es: 0x00 $fs: 0x00 $gs: 0x00 
+───────────────────────────────────────────────────────────────────── stack ────
+0x007fffffffd820│+0x0000: 0x007ffff7ffd020  →  0x007ffff7ffe240  →  0x00555555554000  →   jg 0x555555554047	 ← $rsp
+0x007fffffffd828│+0x0008: 0x007fffffffd920  →  "picoCTF{br1ng_y0ur_0wn_k3y_}AAAAAAAA"
+0x007fffffffd830│+0x0010: 0x007ffff79ef5e0  →  0x0000000000000000
+0x007fffffffd838│+0x0018: 0x00001000000020 (" "?)
+0x007fffffffd840│+0x0020: 0x0000001b00000010
+0x007fffffffd848│+0x0028: 0x007d7fff00000000
+0x007fffffffd850│+0x0030: 0x6201e972d5188243
+0x007fffffffd858│+0x0038: 0x8238d4c7bb1c98d0
+─────────────────────────────────────────────────────────────── code:x86:64 ────
+   0x555555555424                  jmp    0x555555555475
+   0x555555555426                  mov    DWORD PTR [rbp-0xb8], 0x0
+   0x555555555430                  jmp    0x555555555467
+●→ 0x555555555432                  mov    eax, DWORD PTR [rbp-0xb8]
+   0x555555555438                  movsxd rdx, eax
+   0x55555555543b                  mov    rax, QWORD PTR [rbp-0xd8]
+   0x555555555442                  add    rax, rdx
+   0x555555555445                  movzx  edx, BYTE PTR [rax]
+   0x555555555448                  mov    eax, DWORD PTR [rbp-0xb8]
+─────────────────────────────────────────────────────────────────── threads ────
+[#0] Id 1, Name: "keygenme", stopped 0x555555555432 in ?? (), reason: BREAKPOINT
+───────────────────────────────────────────────────────────────────── trace ────
+[#0] 0x555555555432 → mov eax, DWORD PTR [rbp-0xb8]
+[#1] 0x5555555554e2 → test al, al
+[#2] 0x7ffff782920a → __libc_start_call_main(main=0x55555555548b, argc=0x1, argv=0x7fffffffda68)
+[#3] 0x7ffff78292bc → __libc_start_main_impl(main=0x55555555548b, argc=0x1, argv=0x7fffffffda68, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7fffffffda58)
+[#4] 0x55555555514e → hlt 
+────────────────────────────────────────────────────────────────────────────────
+0x7fffffffd8d0:	"picoCTF{br1ng_y0ur_0wn_k3y_19836cd8}\377\177"
+Quit
+Breakpoint 1 at 0x555555555432
+[*] Failed to find objfile or not a valid file format: [Errno 2] No such file or directory: 'system-supplied DSO at 0x7ffff7fc9000'
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, 0x0000555555555432 in ?? ()
+[ Legend: Modified register | Code | Heap | Stack | String ]
+───────────────────────────────────────────────────────────────── registers ────
+$rax   : 0x24              
+$rbx   : 0x0               
+$rcx   : 0x0               
+$rdx   : 0xc0fe01f000000000
+$rsp   : 0x007fffffffd820  →  0x007ffff7ffd020  →  0x007ffff7ffe240  →  0x00555555554000  →   jg 0x555555554047
+$rbp   : 0x007fffffffd900  →  0x007fffffffd950  →  0x0000000000000001
+$rsi   : 0x00555555556008  →   add BYTE PTR [rbp+0x6e], al
+$rdi   : 0x007fffffffd920  →  "picoCTF{br1ng_y0ur_0wn_k3y_}AAAAAAAA"
+$rip   : 0x00555555555432  →   mov eax, DWORD PTR [rbp-0xb8]
+$r8    : 0x1f0             
+$r9    : 0x007fffffffd5b6  →  0x39a39716b4006663 ("cf"?)
+$r10   : 0xcf              
+$r11   : 0x0               
+$r12   : 0x007fffffffda68  →  0x007fffffffde3f  →  "/mnt/sda7/cybersecurity/ctf/pico/2022/reverse_engi[...]"
+$r13   : 0x0055555555548b  →   endbr64 
+$r14   : 0x0               
+$r15   : 0x007ffff7ffd020  →  0x007ffff7ffe240  →  0x00555555554000  →   jg 0x555555554047
+$eflags: [zero CARRY PARITY ADJUST SIGN trap INTERRUPT direction overflow resume virtualx86 identification]
+$cs: 0x33 $ss: 0x2b $ds: 0x00 $es: 0x00 $fs: 0x00 $gs: 0x00 
+───────────────────────────────────────────────────────────────────── stack ────
+0x007fffffffd820│+0x0000: 0x007ffff7ffd020  →  0x007ffff7ffe240  →  0x00555555554000  →   jg 0x555555554047	 ← $rsp
+0x007fffffffd828│+0x0008: 0x007fffffffd920  →  "picoCTF{br1ng_y0ur_0wn_k3y_}AAAAAAAA"
+0x007fffffffd830│+0x0010: 0x007ffff79ef5e0  →  0x0000000000000000
+0x007fffffffd838│+0x0018: 0x00001000000020 (" "?)
+0x007fffffffd840│+0x0020: 0x0000001b00000010
+0x007fffffffd848│+0x0028: 0x007d7fff00000000
+0x007fffffffd850│+0x0030: 0x6201e972d5188243
+0x007fffffffd858│+0x0038: 0x8238d4c7bb1c98d0
+─────────────────────────────────────────────────────────────── code:x86:64 ────
+   0x555555555424                  jmp    0x555555555475
+   0x555555555426                  mov    DWORD PTR [rbp-0xb8], 0x0
+   0x555555555430                  jmp    0x555555555467
+●→ 0x555555555432                  mov    eax, DWORD PTR [rbp-0xb8]
+   0x555555555438                  movsxd rdx, eax
+   0x55555555543b                  mov    rax, QWORD PTR [rbp-0xd8]
+   0x555555555442                  add    rax, rdx
+   0x555555555445                  movzx  edx, BYTE PTR [rax]
+   0x555555555448                  mov    eax, DWORD PTR [rbp-0xb8]
+─────────────────────────────────────────────────────────────────── threads ────
+[#0] Id 1, Name: "keygenme", stopped 0x555555555432 in ?? (), reason: BREAKPOINT
+───────────────────────────────────────────────────────────────────── trace ────
+[#0] 0x555555555432 → mov eax, DWORD PTR [rbp-0xb8]
+[#1] 0x5555555554e2 → test al, al
+[#2] 0x7ffff782920a → __libc_start_call_main(main=0x55555555548b, argc=0x1, argv=0x7fffffffda68)
+[#3] 0x7ffff78292bc → __libc_start_main_impl(main=0x55555555548b, argc=0x1, argv=0x7fffffffda68, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7fffffffda58)
+[#4] 0x55555555514e → hlt 
+────────────────────────────────────────────────────────────────────────────────
+0x7fffffffd8d0:	"picoCTF{br1ng_y0ur_0wn_k3y_19836cd8}\377\177"
+Quit
+Quit
+Breakpoint 1 at 0x555555555432
+[setting tty state failed in terminal_inferior: Input/output error]
+[*] Failed to find objfile or not a valid file format: [Errno 2] No such file or directory: 'system-supplied DSO at 0x7ffff7fc9000'
+Breakpoint 1 at 0x555555555432
+[setting tty state failed in terminal_inferior: Input/output error]
+[*] Failed to find objfile or not a valid file format: [Errno 2] No such file or directory: 'system-supplied DSO at 0x7ffff7fc9000'
+Breakpoint 1 at 0x555555555432
+[setting tty state failed in terminal_inferior: Input/output error]
+[*] Failed to find objfile or not a valid file format: [Errno 2] No such file or directory: 'system-supplied DSO at 0x7ffff7fc9000'
+Breakpoint 1 at 0x555555555432
+[setting tty state failed in terminal_inferior: Input/output error]
+[*] Failed to find objfile or not a valid file format: [Errno 2] No such file or directory: 'system-supplied DSO at 0x7ffff7fc9000'
+Breakpoint 1 at 0x555555555432
+[setting tty state failed in terminal_inferior: Input/output error]
+[*] Failed to find objfile or not a valid file format: [Errno 2] No such file or directory: 'system-supplied DSO at 0x7ffff7fc9000'
