@@ -128,3 +128,9 @@ Breakpoint 1 at 0x555555555432
 Breakpoint 1 at 0x555555555432
 [setting tty state failed in terminal_inferior: Input/output error]
 [*] Failed to find objfile or not a valid file format: [Errno 2] No such file or directory: 'system-supplied DSO at 0x7ffff7fc9000'
+Breakpoint 1 at 0x555555555432
+[setting tty state failed in terminal_inferior: Input/output error]
+[*] Failed to find objfile or not a valid file format: [Errno 2] No such file or directory: 'system-supplied DSO at 0x7ffff7fc9000'
+Breakpoint 1 at 0x555555555432
+[setting tty state failed in terminal_inferior: Input/output error]
+[*] Failed to find objfile or not a valid file format: [Errno 2] No such file or directory: 'system-supplied DSO at 0x7ffff7fc9000'
